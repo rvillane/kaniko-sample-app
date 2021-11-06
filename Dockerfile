@@ -1,14 +1,11 @@
     FROM node:12-alpine  
 
     RUN mkdir -p /dist
-
     RUN chown -R node:node /dist
+    WORKDIR /dist
 
-    RUN ls -la /workspace
     # source folder is the kaniko context /workspace
     COPY * /dist/
-
-    WORKDIR /dist
 
     RUN apk -U upgrade && apk add --upgrade openssl
 
