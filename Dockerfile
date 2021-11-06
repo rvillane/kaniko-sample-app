@@ -10,9 +10,9 @@
 
     WORKDIR /dist
 
-    # RUN apk -U upgrade && apk add --upgrade openssl
+    RUN apk -U upgrade && apk add --upgrade openssl
 
-    # ENV NODE_EXTRA_CA_CERTS=/dist/file.crt
+    ENV NODE_EXTRA_CA_CERTS=/dist/file.crt
 
     # # fixes the 'can’t find Python executable' error
     # RUN apk add --no-cache --virtual .gyp \
