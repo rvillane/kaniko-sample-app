@@ -4,9 +4,9 @@
 
     RUN chown -R node:node /dist
 
-    RUN ls -la .
+    RUN ls -la /workspace
     # source folder is the kaniko context
-    COPY * /dist/
+    COPY /workspace /dist/
 
     WORKDIR /dist
 
