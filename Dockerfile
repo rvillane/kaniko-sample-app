@@ -16,7 +16,7 @@
 
     # fixes the 'can’t find Python executable' error
     RUN apk add --no-cache --virtual .gyp \
-            python \
+            python3 \
             make \
             g++ \
         && npm install -g nodemon \
